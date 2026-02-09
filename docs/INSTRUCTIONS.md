@@ -83,6 +83,7 @@ Create functions in `matching.js` that filter your data based on preferences.
 
 - Use `if (!value)` to handle "any" or empty selections
 - Return `true` or `false` from matching functions
+- Add JSDoc comments to each function (see [JSDoc basics](tutorials/jsdoc-basics.md))
 - Test your functions in the browser console
 
 **Deliverable:** `matching.js` with 4+ working functions.

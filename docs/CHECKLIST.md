@@ -18,7 +18,7 @@ Verify your project before submitting.
 ## Matching functions
 
 - [ ] `matching.js` has at least 4 functions
-- [ ] Each function has a JSDoc comment explaining what it does
+- [ ] Each function has a JSDoc comment explaining what it does (see [JSDoc basics](tutorials/jsdoc-basics.md))
 - [ ] Functions use proper JS concepts:
   - [ ] At least one uses simple conditionals
   - [ ] At least one uses comparison operators (>, <, >=, <=)

@@ -127,7 +127,9 @@ function getMatchMessage(score) {
 
 ## JSDoc comments
 
-Always document your functions:
+Always document your functions with JSDoc comments. See [JSDoc basics](../tutorials/jsdoc-basics.md) for a full tutorial.
+
+Quick reference:
 
 ```javascript
 /**
@@ -138,11 +140,7 @@ Always document your functions:
  */
 ```
 
-Benefits:
-
-- VS Code shows hints when you use the function
-- Other developers (and future you) understand the code
-- `/doc` command can help generate these
+The `@param` tags match your function's parameters, and `@returns` describes what `return` gives back.
 
 ---
 
