@@ -4,11 +4,11 @@ A personalized recommendation tool built with JavaScript.
 
 ## About this project
 
-**Your domain:** [Replace with your chosen domain]
+**Your domain:** Pets
 
-**Your question:** What should I [watch/eat/play/etc.]?
+**Your question:** What pet should I get?
 
-**Description:** [Describe what your recommendation tool helps users decide]
+**Description:** This recommendation tool helps users decide which pet is best for them based on their preferences and needs.
 
 ## How it works
 

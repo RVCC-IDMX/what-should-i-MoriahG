@@ -6,7 +6,7 @@ Instructions for GitHub Copilot when working on this project.
 
 This is a "What should I...?" recommendation tool.
 
-**Domain:** [Your domain here - e.g., movies, restaurants, games]
+**Domain:** Pets
 
 **Purpose:** Help users find recommendations based on their preferences.
 

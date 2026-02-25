@@ -6,12 +6,12 @@ Verify your project before submitting.
 
 ## Data file
 
-- [ ] `data.js` contains valid JavaScript (no red squiggles in VS Code)
-- [ ] Domain and description fields are filled in
-- [ ] Options array has 15-25 items
-- [ ] Each item has the same properties (consistent schema)
-- [ ] Property names use camelCase
-- [ ] No trailing commas after the last property
+- [x] `data.js` contains valid JavaScript (no red squiggles in VS Code)
+- [x] Domain and description fields are filled in
+- [x] Options array has 15-25 items
+- [x] Each item has the same properties (consistent schema)
+- [x] Property names use camelCase
+- [x] No trailing commas after the last property
 
 ---
 
