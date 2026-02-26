@@ -17,14 +17,14 @@ Verify your project before submitting.
 
 ## Matching functions
 
-- [ ] `matching.js` has at least 4 functions
-- [ ] Each function has a JSDoc comment explaining what it does (see [JSDoc basics](tutorials/jsdoc-basics.md))
-- [ ] Functions use proper JS concepts:
-  - [ ] At least one uses simple conditionals
-  - [ ] At least one uses comparison operators (>, <, >=, <=)
-  - [ ] At least one uses logical operators (&&)
-  - [ ] At least one uses if/else chain
-- [ ] Functions return the correct type (boolean or string)
+- [x] `matching.js` has at least 4 functions
+- [x] Each function has a JSDoc comment explaining what it does (see [JSDoc basics](tutorials/jsdoc-basics.md))
+- [x] Functions use proper JS concepts:
+  - [x] At least one uses simple conditionals
+  - [x] At least one uses comparison operators (>, <, >=, <=)
+  - [x] At least one uses logical operators (&&)
+  - [x] At least one uses if/else chain
+- [x] Functions return the correct type (boolean or string)
 
 ---
 

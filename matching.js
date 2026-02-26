@@ -10,77 +10,149 @@
  * 4. Classification function (if/else chain)
  */
 
-// ============================================================
-// EXAMPLE FUNCTIONS - Replace these with your own!
-// ============================================================
+// ===================================================================
+// MY FUNCTIONS - Each animal property has criteria checking functions
+// ===================================================================
 
 /**
- * Checks if an item matches the desired mood
- * @param {Object} item - An item from your data
- * @param {string} desiredMood - The mood the user wants
- * @returns {boolean} - True if the item matches the mood
+ * Checks if an animal matches the desired name
+ * @param {Object} animal - An animal from data
+ * @param {string} desiredName - The animal name the user wants
+ * @returns {boolean} - True if the animal matches the desired name
  */
-function matchesMood(item, desiredMood) {
-  // If no mood preference, everything matches
-  if (!desiredMood) {
+function matchesName(animal, desiredName) {
+  // If no name preference, everything matches
+  if (!desiredName) {
     return true;
   }
 
-  // Check if the item's mood matches the desired mood
-  return item.mood === desiredMood;
+  // Check if the animal's name matches the desired name
+  return animal.name === desiredName;
 }
 
 /**
- * Checks if an item fits within the available time
- * @param {Object} item - An item from your data
- * @param {number} availableMinutes - Maximum time available
- * @returns {boolean} - True if the item fits in the time
+ * Checks if an animal matches the desired species
+ * @param {Object} animal - An animal from data
+ * @param {string} desiredSpecies - The species the user wants
+ * @returns {boolean} - True if the animal matches the desired species
  */
-function fitsTimeAvailable(item, availableMinutes) {
-  // If no time constraint, everything fits
-  if (!availableMinutes) {
+function matchesSpecies(animal, desiredSpecies) {
+  if (!desiredSpecies) {
     return true;
   }
 
-  // Check if item's duration is within available time
-  return item.timeMinutes <= availableMinutes;
+  return animal.species === desiredSpecies;
 }
 
 /**
- * Checks if an item matches multiple criteria at once
- * @param {Object} item - An item from your data
- * @param {Object} preferences - Object with user preferences
- * @returns {boolean} - True if item matches ALL criteria
+ * Checks if an animal matches the desired temperament
+ * @param {Object} animal - An animal from data
+ * @param {string} desiredTemperament - The temperament the user wants
+ * @returns {boolean} - True if the animal matches the desired temperament
  */
-function meetsAllCriteria(item, preferences) {
+function matchesTemperament(animal, desiredTemperament) {
+  if (!desiredTemperament) {
+    return true;
+  }
+
+  return animal.temperament === desiredTemperament;
+}
+
+/**
+ * Checks if an animal matches the desired size
+ * @param {Object} animal - An animal from data
+ * @param {string} desiredSize - The size the user wants
+ * @returns {boolean} - True if the animal matches the desired size
+ */
+function matchesSize(animal, desiredSize) {
+  if (!desiredSize) {
+    return true;
+  }
+
+  return animal.size === desiredSize;
+}
+
+/**
+ * Checks if an animal matches the desired maintenance level
+ * @param {Object} animal - An animal from data
+ * @param {string} desiredMaintLevel - The maintenance level the user wants
+ * @returns {boolean} - True if the animal matches the desired maintenance level
+ */
+function matchesMaintLevel(animal, desiredMaintLevel) {
+  if (!desiredMaintLevel) {
+    return true;
+  }
+
+  return animal.maintenanceLevel === desiredMaintLevel;
+}
+
+/**
+ * Checks if an animal fits the desired life span
+ * @param {Object} animal - An animal from data
+ * @param {number} maxLifeSpan - Maximum life span allowed
+ * @returns {boolean} - True if the animal fits the desired life span
+ */
+function fitsLifeSpan(animal, maxLifeSpan) {
+  // If no life span constraint, everything fits
+  if (!maxLifeSpan) {
+    return true;
+  }
+
+  // Check if animal's life span is within available time
+  return animal.lifeSpan <= maxLifeSpan;
+}
+
+/**
+ * Checks if an animal fits the users adoption fee budget
+ * @param {Object} animal - An animal from data
+ * @param {number} maxFee - Maximum fee allowed
+ * @returns {boolean} - True if the animal fits the users adoption fee budget
+ */
+function fitsFeeBudget(animal, maxFee) {
+  if (!maxFee) {
+    return true;
+  }
+
+  return animal.fee <= maxFee;
+}
+
+/**
+ * Checks if an animal matches multiple criteria at once
+ * @param {Object} animal - An animal from data
+ * @param {Object} prefs - Object with user preferences
+ * @returns {boolean} - True if animal matches ALL criteria
+ */
+function meetsAllCriteria(animal, prefs) {
   // Use && to combine multiple checks
   return (
-    matchesMood(item, preferences.mood) &&
-    fitsTimeAvailable(item, preferences.time)
-    // Add more checks here as needed
+    matchesName(animal, prefs.name) &&
+    matchesSpecies(animal, prefs.species) &&
+    matchesTemperament(animal, prefs.temperament) &&
+    matchesSize(animal, prefs.size) &&
+    matchesMaintLevel(animal, prefs.maintenanceLevel) &&
+    fitsLifeSpan(animal, prefs.lifeSpan) &&
+    fitsFeeBudget(animal, prefs.adoptionFeeAvg)
   );
 }
 
 /**
- * Returns a message based on how well an item matches
- * @param {number} matchScore - How many criteria matched (0-3)
+ * Returns a message based on how well an animal matches user preferences
+ * @param {number} matchScore - How many criteria matched (0-7)
  * @returns {string} - A recommendation message
  */
 function getMatchMessage(matchScore) {
-  if (matchScore === 3) {
-    return "Perfect match!";
-  } else if (matchScore === 2) {
-    return "Great option";
-  } else if (matchScore === 1) {
-    return "Worth considering";
-  } else {
-    return "Might work";
+  if (matchScore === 0) {
+    return "This pet doesn't match your preferences.";
+  } else if (matchScore < 3) { // 1-2
+    return "This pet has some potential!";
+  } else if (matchScore < 5) { // 3-4
+    return "This pet is worth considering!";
+  } else if (matchScore < 7) { // 5-6
+    return "This is a great pet option!";
+  } else { // 7
+    return "This is the perfect pet for you!";
   }
 }
 
-// ============================================================
-// YOUR FUNCTIONS GO HERE
-// ============================================================
 
-// TODO: Write your own matching functions for your domain
-// Remember: You need at least 4 functions!
+
