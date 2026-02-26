@@ -1,12 +1,10 @@
 # AI collaboration summary
 
-Rename this file to `ai-collaboration-summary.md` before submitting.
-
 ## Project overview
 
-**Domain:** [Your chosen domain]
+**Domain:** Pets
 
-**AI tools used:** [e.g., GitHub Copilot, Claude, ChatGPT]
+**AI tools used:** Github Copilot GPT-4.1
 
 ---
 
@@ -14,11 +12,14 @@ Rename this file to `ai-collaboration-summary.md` before submitting.
 
 ### What I asked AI to help with
 
-[Describe the prompts you used to generate or refine your data]
+I asked Copilot to help generate more pets for my data.js file.
+
+**Prompt:**
+> Generate 15-25 more pet items for the options array with the same properties as the first two. Make them vary in animal type, such as amphibians and reptiles.
 
 ### What I verified or changed
 
-[List any corrections you made to AI-generated data]
+I had to search up a few animals since it decided to name some niche specific breeds of animals that I didn't know, but upon looking them up, I verifed what they were and kept them because I recognized they were common pets. The AI did give somewhat inaccurate properties to the animals, such as poor temperament classifications and life span averages that I had to fix.
 
 ---
 

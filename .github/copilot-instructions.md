@@ -8,7 +8,7 @@ This is a "What should I...?" recommendation tool.
 
 **Domain:** Pets
 
-**Purpose:** Help users find recommendations based on their preferences.
+**Purpose:** Help users find pet recommendations based on their preferences.
 
 ## Code style
 
@@ -23,11 +23,19 @@ The data lives in `data.js` as a JavaScript object:
 
 ```javascript
 const data = {
-  domain: "Your domain",
-  description: "What this recommender does",
+  domain: "Pets",
+  description: "Helps users find pet recommendations based on their preferences",
   options: [
-    // Array of items to recommend
-  ],
+      {
+      name: "Cat",
+      species: "Mammal",
+      temperament: "varied",
+      size: "small",
+      lifeSpan: 15,
+      adoptionFeeAvg: 100,
+      maintenanceLevel: "low",
+      },
+  ]
 };
 ```
 
@@ -39,10 +47,3 @@ Functions in `matching.js` should:
 - Handle empty/null preferences (return `true` if no preference)
 - Use descriptive parameter names
 
-## Customization
-
-Update this file as you work! Add notes about:
-
-- Your specific data properties
-- Naming conventions you're using
-- Edge cases to watch for
