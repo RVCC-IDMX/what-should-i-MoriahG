@@ -40,32 +40,32 @@ Verify your project before submitting.
 
 ## Documentation
 
-- [ ] `README.md` describes your domain and project
-- [ ] `.github/copilot-instructions.md` is customized for your domain
-- [ ] `ai-collaboration-summary-template.md` is completed and renamed
+- [x] `README.md` describes your domain and project
+- [x] `.github/copilot-instructions.md` is customized for your domain
+- [x] `ai-collaboration-summary-template.md` is completed and renamed
 
 ---
 
 ## Deployment
 
-- [ ] Site is deployed to Netlify
-- [ ] Live URL is added to README
-- [ ] All form filters work on the live site
-- [ ] Recommendations display correctly online
-- [ ] No console errors on the live site
+- [x] Site is deployed to Netlify
+- [x] Live URL is added to README
+- [x] All form filters work on the live site
+- [x] Recommendations display correctly online
+- [x] No console errors on the live site
 
 ---
 
 ## Git history
 
-- [ ] Multiple commits throughout the project
-- [ ] Commit messages describe what changed
-- [ ] No node_modules, .specstory, or .claude folders committed
+- [x] Multiple commits throughout the project
+- [x] Commit messages describe what changed
+- [x] No node_modules, .specstory, or .claude folders committed
 
 ---
 
 ## Final check
 
-- [ ] Open `index.html` in browser - does it work?
-- [ ] Try different preference combinations
-- [ ] Check browser console for errors (F12 → Console)
+- [x] Open `index.html` in browser - does it work?
+- [x] Try different preference combinations
+- [x] Check browser console for errors (F12 → Console)
