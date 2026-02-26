@@ -10,40 +10,97 @@
     <main class="container">
       <header>
         <h1>What Should I...?</h1>
-        <p class="subtitle">Your personalized recommendation tool</p>
+        <p class="subtitle">Your personalized pet recommendation tool</p>
       </header>
 
       <section class="preferences">
-        <h2>Tell me your preferences</h2>
+        <h2>Tell me your dream pet preferences</h2>
 
         <form id="preference-form">
+          
           <div class="form-group">
-            <label for="mood">What's your mood?</label>
-            <select id="mood" name="mood">
-              <option value="">Any mood</option>
-              <option value="relaxed">Relaxed</option>
+            <label for="species">Which animal species?</label>
+            <select id="species" name="species">
+              <option value="">Any species</option>
+              <option value="Mammal">Mammal</option>
+              <option value="Bird">Bird</option>
+              <option value="Reptile">Reptile</option>
+              <option value="Amphibian">Amphibian</option>
+              <option value="Fish">Fish</option>
+              <option value="Invertebrate">Invertebrate</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="temperament">What's your ideal pet temperament?</label>
+            <select id="temperament" name="temperament">
+              <option value="">Any temperament</option>
+              <option value="varied">Varied</option>
+              <option value="friendly">Friendly</option>
+              <option value="calm">Calm</option>
+              <option value="shy">Shy</option>
+              <option value="cheerful">Cheerful</option>
+              <option value="gentle">Gentle</option>
+              <option value="independent">Independent</option>
+              <option value="social">Social</option>
+              <option value="solitary">Solitary</option>
+              <option value="intelligent">Intelligent</option>
               <option value="energetic">Energetic</option>
-              <option value="focused">Focused</option>
-              <option value="adventurous">Adventurous</option>
+              <option value="docile">Docile</option>
+              <option value="quiet">Quiet</option>
+              <option value="curious">Curious</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="time">How much time do you have?</label>
-            <select id="time" name="time">
-              <option value="">Any amount</option>
-              <option value="15">15 minutes or less</option>
-              <option value="30">About 30 minutes</option>
-              <option value="60">About an hour</option>
-              <option value="120">A couple hours</option>
+            <label for="size"> What's your preferred pet size?</label>
+            <select id="size" name="size">
+              <option value="">Any size</option>
+              <option value="tiny">Tiny</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="category">Category preference?</label>
-            <select id="category" name="category">
-              <option value="">Any category</option>
-              <!-- Students will customize these options for their domain -->
+            <label for="lifeSpan"> What's your ideal max life span?</label>
+            <select id="lifeSpan" name="lifeSpan">
+              <option value="">Any life span</option>
+              <option value="5"> 5 years</option>
+              <option value="10"> 10 years</option>
+              <option value="15"> 15 years</option>
+              <option value="20"> 20 years</option>
+              <option value="30"> 30 years</option>
+              <option value="40"> 40 years</option>
+              <option value="50"> 50 years</option>
+              <option value="100"> 100 years</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="adoptionFeeAvg"> What's your ideal max adoption fee?</label>
+            <select id="adoptionFeeAvg" name="adoptionFeeAvg">
+              <option value="">Any fee</option>
+              <option value="15">$15</option>
+              <option value="20">$20</option>
+              <option value="50">$50</option>
+              <option value="100">$100</option>
+              <option value="200">$200</option>
+              <option value="500">$500</option>
+              <option value="1000">$1000</option>
+              <option value="2000">$2000</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="maintenanceLevel"> What's your preferred pet maintenance level?</label>
+            <select id="maintenanceLevel" name="maintenanceLevel">
+              <option value="">Any maintenance level</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="very high">Very High</option>
             </select>
           </div>
 

@@ -30,11 +30,11 @@ Verify your project before submitting.
 
 ## App logic
 
-- [ ] Recommendations appear when form is submitted
-- [ ] "No results" message shows when nothing matches
-- [ ] Recommendation cards display your item properties
-- [ ] Category dropdown has your domain's categories
-- [ ] No errors in browser console
+- [x] Recommendations appear when form is submitted
+- [x] "No results" message shows when nothing matches
+- [x] Recommendation cards display your item properties
+- [x] Category dropdown has your domain's categories
+- [x] No errors in browser console
 
 ---
 

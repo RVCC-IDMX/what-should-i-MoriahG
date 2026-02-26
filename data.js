@@ -18,7 +18,7 @@ const data = {
       {
       name: "Cat",
       species: "Mammal",
-      temperament: "relaxed",
+      temperament: "varied",
       size: "small",
       lifeSpan: 15,
       adoptionFeeAvg: 100,
@@ -36,7 +36,7 @@ const data = {
       {
         name: "Dog",
         species: "Mammal",
-        temperament: "friendly",
+        temperament: "varied",
         size: "medium",
         lifeSpan: 13,
         adoptionFeeAvg: 150,
@@ -54,7 +54,7 @@ const data = {
       {
         name: "Rabbit",
         species: "Mammal",
-        temperament: "gentle",
+        temperament: "independent",
         size: "small",
         lifeSpan: 9,
         adoptionFeeAvg: 50,
@@ -63,7 +63,7 @@ const data = {
       {
         name: "Hamster",
         species: "Mammal",
-        temperament: "playful",
+        temperament: "energetic",
         size: "tiny",
         lifeSpan: 3,
         adoptionFeeAvg: 15,
@@ -198,7 +198,7 @@ const data = {
       {
         name: "Rat",
         species: "Mammal",
-        temperament: "smart",
+        temperament: "intelligent",
         size: "small",
         lifeSpan: 3,
         adoptionFeeAvg: 20,
@@ -218,7 +218,7 @@ const data = {
         species: "Reptile",
         temperament: "calm",
         size: "small",
-        lifeSpan: 40,
+        lifeSpan: 100,
         adoptionFeeAvg: 50,
         maintenanceLevel: "medium",
       },

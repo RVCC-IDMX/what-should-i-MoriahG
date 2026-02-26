@@ -113,7 +113,7 @@ function fitsFeeBudget(animal, maxFee) {
     return true;
   }
 
-  return animal.fee <= maxFee;
+  return animal.adoptionFeeAvg <= maxFee;
 }
 
 /**

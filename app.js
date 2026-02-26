@@ -19,14 +19,20 @@ form.addEventListener("submit", function (event) {
 
   // Get user preferences from the form
   const preferences = {
-    mood: document.getElementById("mood").value,
-    time: document.getElementById("time").value,
-    category: document.getElementById("category").value,
+    species: document.getElementById("species").value,
+    temperament: document.getElementById("temperament").value,
+    size: document.getElementById("size").value,
+    lifeSpan: document.getElementById("lifeSpan").value,
+    adoptionFeeAvg: document.getElementById("adoptionFeeAvg").value,
+    maintenanceLevel: document.getElementById("maintenanceLevel").value,
   };
 
-  // Convert time to a number (it comes as a string from the form)
-  if (preferences.time) {
-    preferences.time = Number(preferences.time);
+  // Convert lifeSpan and adoptionFeeAvg to a number (it comes as a string from the form)
+  if (preferences.lifeSpan) {
+    preferences.lifeSpan = Number(preferences.lifeSpan);
+  }
+  if (preferences.adoptionFeeAvg) {
+    preferences.adoptionFeeAvg = Number(preferences.adoptionFeeAvg);
   }
 
   // Find matching recommendations
@@ -46,11 +52,11 @@ function findRecommendations(preferences) {
 
   // Loop through all options and check each one
   for (let i = 0; i < data.options.length; i++) {
-    const item = data.options[i];
+    const animal = data.options[i];
 
-    // Use your matching function to check if this item matches
-    if (meetsAllCriteria(item, preferences)) {
-      matches.push(item);
+    // Use your matching function to check if this animal matches
+    if (meetsAllCriteria(animal, preferences)) {
+      matches.push(animal);
     }
   }
 
@@ -74,18 +80,18 @@ function displayRecommendations(recommendations) {
 
   // Create a card for each recommendation
   for (let i = 0; i < recommendations.length; i++) {
-    const item = recommendations[i];
-    const card = createRecommendationCard(item);
+    const animal = recommendations[i];
+    const card = createRecommendationCard(animal);
     resultsList.appendChild(card);
   }
 }
 
 /**
  * Creates an HTML element for a recommendation
- * @param {Object} item - The recommendation item
+ * @param {Object} animal - The recommendation item
  * @returns {HTMLElement} - A div element with the recommendation details
  */
-function createRecommendationCard(item) {
+function createRecommendationCard(animal) {
   const card = document.createElement("div");
   card.className = "recommendation-card";
 
@@ -97,10 +103,13 @@ function createRecommendationCard(item) {
   // XSS (Cross-Site Scripting) attacks. For user-generated content, use textContent
   // instead, or a sanitization library. We'll learn more about this in later weeks!
   card.innerHTML = `
-    <h3>${item.title}</h3>
-    <p>Category: ${item.category}</p>
-    <p>Mood: ${item.mood}</p>
-    <p>Time: ${item.timeMinutes} minutes</p>
+    <h3>${animal.name}</h3>
+    <p>Species: ${animal.species}</p>
+    <p>Temperament: ${animal.temperament}</p>
+    <p>Size: ${animal.size} </p>
+    <p>Life Span: ${animal.lifeSpan} years</p>
+    <p>Adoption Fee: $${animal.adoptionFeeAvg}</p>
+    <p>Maintenance Level: ${animal.maintenanceLevel}</p>
   `;
 
   return card;
